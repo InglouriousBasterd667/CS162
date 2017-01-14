@@ -1,11 +1,15 @@
-all: hw0
+all: wc map
 
-hw0: wc.o
-	gcc wc.o -o hw0	
-
+wc: wc.o
+	gcc wc.o  -o wc	
 wc.o:
-	gcc -c -Wall  wc.c
+	gcc -g -c -Wall  wc.c
 
+map: map.o
+	gcc map.o -o map
+
+map.o:
+	gcc -g -c -Wall map.c
 clean:
-	rm *o hw0
+	rm *o
 
